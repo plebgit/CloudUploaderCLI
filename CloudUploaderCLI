@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Azure Storage account name and container name
+storage_account="cs210032001fa0b3dd6"
+container_name="container-east-us"
+
+# Azure Storage account key
+storage_account_key=""
+
+az login
+
+# Manual input for file path
+read -p "Enter the file name you want to upload: " selected_file_name
+
+# Find the full path of the selected file
+selected_file_path=$(realpath "$selected_file_name")
+
+# Check if the selected file exists
+if [ ! -f "$selected_file_path" ]; then
+    echo "Selected file does not exist."
+    exit 1
+fi
+
+# Get the storage account key
+account_key=$(az storage account keys list -n $storage_account --query "[0].value" -o tsv)
+
+# Upload the file to Azure Storage
+az storage blob upload --account-name $storage_account --account-key $account_key --container-name $container_name --name $(basename "$selected_file_path") --type block --content-type "application/octet-stream" --file "$selected_file_path" --overwrite
+
+echo "File uploaded successfully to Azure Storage."
+
+
