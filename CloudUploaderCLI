@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Azure Storage account name and container name
-storage_account="cs210032001fa0b3dd6"
-container_name="container-east-us"
+storage_account=""
+container_name=""
 
 # Azure Storage account key
 storage_account_key=""
