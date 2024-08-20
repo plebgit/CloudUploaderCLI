@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Might need to install AZ module for a local computer to make this run. Also PV for progress bar. 
+
+#az login
+
+#cs2AccountKey
+source Azure_Config.env
+
+
+echo Uploading $1
+
+if [ ! -f $1 ]; then
+        echo "File not found!"
+fi
+
+az storage file upload --account-key $cs2Storage_Account_Key --account-name cs210032001fa0b3dd6  --share-name cs-christianrdz0404-gmail-com-10032001fa0b3dd6 --source $1
