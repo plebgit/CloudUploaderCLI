@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Might need to install AZ module for a local computer to make this run. Also PV for progress bar. 
+#PV for progress bar
 
 #az login
 
