@@ -33,7 +33,8 @@ https://learntocloud.guide
     Store credentials in environment variables or configuration files with restricted access. ✅
 
 
-    Utilize cloud provider's secure authentication methods (e.g., IAM roles for AWS, service principals for Azure). ❌
+    Utilize cloud provider's secure authentication methods ❌
+    (e.g., IAM roles for AWS, service principals for Azure). 
 
 
 
@@ -54,10 +55,12 @@ https://learntocloud.guide
     Check if the provided file path is valid and accessible. ✅
 
 
-    Ensure that additional arguments meet expected formats and values. ❌
+    Ensure that additional arguments meet ❌
+    expected formats and values. 
 
 
-    Provide meaningful error messages for incorrect or missing inputs ❌
+    Provide meaningful error messages for incorrect or ❌
+    missing inputs 
 
 
 
@@ -96,7 +99,9 @@ https://learntocloud.guide
     Provide an option to generate and display a shareable link post-upload. ❌
 
 
-    Enable file synchronization -- if the file already exists in the cloud, prompt the user to overwrite, skip, or rename. ❌
+    Enable file synchronization -- ❌
+    if the file already exists in the cloud, 
+    prompt the user to overwrite, skip, or rename. 
 
 
     Integrate encryption for added security before the upload. ❌
