@@ -1,12 +1,8 @@
 #!/bin/bash
-
-#PV for progress bar
-
 #az login
 
 #cs2AccountKey
 source Azure_Config.env
-
 
 echo Uploading $1
 
